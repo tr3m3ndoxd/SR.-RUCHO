@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="logo.png">
+<title>Sr Rucho Carpintería · Muebles a medida con precio antes de cortar</title>
+<meta name="description" content="Carpintería a medida con cotizador online, planos y seguimiento de obra. Startup ficticia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="#top"><img src="logo.png" alt="Logo Sr Rucho Carpintería"><span>Sr Rucho</span></a>
+<nav><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#tecnologia">Tecnología</a><a class="btn" href="#contacto">Pedir presupuesto</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap hero-grid">
+<div>
+<h1>Muebles a medida, con precio y plano antes de cortar.</h1>
+<p class="lead">Sr Rucho combina el oficio de la carpintería con medición láser, corte CNC y seguimiento online. Vos ves el costo, el diseño y el avance de tu obra desde el celular.</p>
+<div class="stats"><div><b>48 h</b><span>para recibir tu plano</span></div><div><b>±2 mm</b><span>de precisión de corte</span></div><div><b>5 años</b><span>de garantía en herrajes</span></div></div>
+</div>
+
+<div class="quote" id="cotizador">
+<h2>Cotizá tu mueble</h2>
+<svg id="draw" viewBox="0 0 420 300" role="img" aria-label="Dibujo del mueble con sus medidas"></svg>
+<div class="ctl">
+<label>Tipo de mueble<select id="tipo"><option value="placard">Placard</option><option value="mesa">Mesa</option><option value="biblioteca">Biblioteca</option><option value="escritorio">Escritorio</option></select></label>
+<label>Material<select id="mat"><option value="1">Melamina</option><option value="1.3">Pino</option><option value="1.8">Algarrobo</option></select></label>
+<label>Ancho <output id="ow"></output><input type="range" id="w" min="60" max="400" value="180" step="5"></label>
+<label>Alto <output id="oh"></output><input type="range" id="h" min="40" max="260" value="240" step="5"></label>
+<label>Profundidad <output id="od"></output><input type="range" id="d" min="25" max="100" value="60" step="5"></label>
+</div>
+<div class="price"><div><small>Precio estimado</small><strong id="p">—</strong><small id="t"></small></div><a class="btn" href="#contacto" id="ask">Pedir este presupuesto</a></div>
+</div>
+</div></div>
+
+<section id="servicios"><div class="wrap">
+<div class="sec-head"><h2>Lo que fabricamos</h2><p>Todo se hace a medida en nuestro taller de Córdoba y se instala con equipo propio.</p></div>
+<div class="svc">
+<div><h3>Placares y vestidores</h3><p>Interiores organizados con cajoneras, barrales y puertas corredizas o batientes.</p></div>
+<div><h3>Cocinas y bajomesadas</h3><p>Módulos resistentes a la humedad, con herrajes de cierre suave.</p></div>
+<div><h3>Mesas y escritorios</h3><p>Maderas macizas o enchapadas, con pasacables y medidas a tu espacio.</p></div>
+<div><h3>Bibliotecas y muebles de TV</h3><p>Estantes reforzados, iluminación LED integrada y frentes a elección.</p></div>
+</div></div></section>
+
+<section id="proceso" class="alt"><div class="wrap">
+<div class="sec-head"><h2>Cómo trabajamos</h2><p>Un proceso corto y con novedades en cada etapa.</p></div>
+<ol class="steps">
+<li><h3>Cotizás online</h3><p>Ponés medidas y material, y ves el precio y el plazo al instante.</p></li>
+<li><h3>Medimos y diseñamos</h3><p>Vamos a tu casa con medidor láser y te enviamos el plano en 48 horas.</p></li>
+<li><h3>Cortamos y armamos</h3><p>La máquina CNC corta cada pieza; el carpintero arma y termina.</p></li>
+<li><h3>Instalamos</h3><p>Coordinamos el día por WhatsApp y dejamos todo limpio y nivelado.</p></li>
+</ol></div></section>
+
+<section id="tecnologia" class="tech"><div class="wrap">
+<div class="sec-head"><h2>Oficio con herramientas nuevas</h2><p>La tecnología no reemplaza al carpintero. Le quita errores y te da información.</p></div>
+<div class="tech-grid">
+<div><h3>Cotizador en línea</h3><p>Calcula el costo según volumen y material, sin esperar una llamada.</p></div>
+<div><h3>Corte CNC</h3><p>Las piezas salen iguales al plano, con menos desperdicio de madera.</p></div>
+<div><h3>Seguimiento de obra</h3><p>Fotos y estado de tu pedido en un enlace privado, de la madera a la instalación.</p></div>
+</div></div></section>
+
+<section id="contacto"><div class="wrap contact-grid">
+<div class="sec-head"><h2>Contanos qué necesitás</h2><p>Te respondemos en el día con los próximos pasos. Si venís del cotizador, tu estimado ya está incluido en el mensaje.</p></div>
+<div>
+<form id="f" novalidate>
+<label>Nombre<input type="text" id="n" autocomplete="name"><span class="err" id="en"></span></label>
+<label>Email o WhatsApp<input type="text" id="c" autocomplete="email"><span class="err" id="ec"></span></label>
+<label>Mensaje<textarea id="m" rows="5"></textarea><span class="err" id="em"></span></label>
+<button class="btn" type="submit">Enviar consulta</button>
+</form>
+<div class="ok" id="ok" role="status" tabindex="-1"><h3>Consulta enviada</h3><p id="okt" style="margin-top:8px"></p><p style="margin-top:8px;font-size:.85rem;color:var(--muted)">Demostración: esta página no envía datos a ningún servidor.</p></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Sr Rucho Carpintería. Startup ficticia de demostración.</span><span>Córdoba, Argentina</span></div></footer>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var K={placard:450000,mesa:300000,biblioteca:520000,escritorio:380000};
+var NS='http://www.w3.org/2000/svg';
+function fmt(n){return '$ '+n.toLocaleString('es-AR')}
+function calc(){
+var w=+$('w').value,h=+$('h').value,d=+$('d').value,t=$('tipo').value,m=+$('mat').value;
+var v=w*h*d/1e6;
+var base=Math.max(90000,v*K[t]*m+60000);
+var lo=Math.round(base*.92/5000)*5000,hi=Math.round(base*1.12/5000)*5000;
+var days=10+Math.round(v*7);
+return {w:w,h:h,d:d,t:t,lo:lo,hi:hi,days:days,mat:$('mat').options[$('mat').selectedIndex].text};
+}
+function line(x1,y1,x2,y2,c,sw){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+(c||'currentColor')+'" stroke-width="'+(sw||1.5)+'"/>'}
+function draw(q){
+var s=Math.min(280/q.w,190/q.h),W=q.w*s,H=q.h*s,x=(420-W)/2-8,y=(255-H)/2+6,o=q.d*s*.22,sk='#2b1409',fl='#e2b57f';
+var g='<g style="color:'+(matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement.dataset.theme!=='light'?'#f6ebdc':'#2b1409')+'">';
+g+='<rect x="'+(x+o)+'" y="'+(y-o)+'" width="'+W+'" height="'+H+'" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>';
+g+=line(x+W,y,x+W+o,y-o)+line(x+W,y+H,x+W+o,y+H-o);
+g+='<rect x="'+x+'" y="'+y+'" width="'+W+'" height="'+H+'" fill="'+fl+'" stroke="'+sk+'" stroke-width="2.5"/>';
+if(q.t==='placard'){var n=Math.max(2,Math.round(q.w/60));for(var i=1;i<n;i++)g+=line(x+W*i/n,y,x+W*i/n,y+H,sk,2);g+='<rect x="'+(x+W/n-8)+'" y="'+(y+H*.45)+'" width="4" height="'+H*.12+'" fill="'+sk+'"/>'}
+else if(q.t==='biblioteca'){var r=Math.max(2,Math.round(q.h/35));for(var j=1;j<r;j++)g+=line(x,y+H*j/r,x+W,y+H*j/r,sk,2);g+=line(x+W/2,y,x+W/2,y+H,sk,1.5)}
+else if(q.t==='mesa'){var th=Math.max(6,H*.08);g='<g style="color:'+g.match(/color:([^"]+)"/)[1]+'">'+'<rect x="'+x+'" y="'+y+'" width="'+W+'" height="'+th+'" fill="'+sk+'"/>'+'<rect x="'+(x+W*.06)+'" y="'+(y+th)+'" width="'+Math.max(5,W*.04)+'" height="'+(H-th)+'" fill="'+sk+'"/>'+'<rect x="'+(x+W*.9)+'" y="'+(y+th)+'" width="'+Math.max(5,W*.04)+'" height="'+(H-th)+'" fill="'+sk+'"/>'}
+else{var th2=Math.max(6,H*.08);g+='<rect x="'+x+'" y="'+y+'" width="'+W+'" height="'+th2+'" fill="'+sk+'"/>';g+=line(x+W*.68,y+th2,x+W*.68,y+H,sk,2);for(var k=0;k<3;k++)g+='<rect x="'+(x+W*.72)+'" y="'+(y+th2+(H-th2)*k/3+4)+'" width="'+W*.24+'" height="'+((H-th2)/3-8)+'" fill="none" stroke="'+sk+'" stroke-width="1.5"/>'}
+var by=y+H+22;
+g+=line(x,by,x+W,by)+line(x,by-5,x,by+5)+line(x+W,by-5,x+W,by+5)+'<text x="'+(x+W/2)+'" y="'+(by+16)+'" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">'+q.w+' cm</text>';
+var lx=x-22;
+g+=line(lx,y,lx,y+H)+line(lx-5,y,lx+5,y)+line(lx-5,y+H,lx+5,y+H)+'<text transform="translate('+(lx-8)+','+(y+H/2)+') rotate(-90)" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">'+q.h+' cm</text>';
+g+='<text x="'+(x+W+o+4)+'" y="'+(y-o-4)+'" font-size="12" fill="currentColor">prof. '+q.d+'</text>';
+$('draw').innerHTML=g+'</g>';
+}
+var last;
+function update(){
+var q=last=calc();
+$('ow').textContent=q.w+' cm';$('oh').textContent=q.h+' cm';$('od').textContent=q.d+' cm';
+$('p').textContent=fmt(q.lo)+' – '+fmt(q.hi);
+$('t').textContent='Plazo estimado: '+q.days+' días hábiles · precios de referencia en pesos';
+draw(q);
+}
+['tipo','mat','w','h','d'].forEach(function(i){$(i).addEventListener('input',update)});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',update);
+update();
+$('ask').addEventListener('click',function(){
+var q=last,tn=$('tipo').options[$('tipo').selectedIndex].text.toLowerCase();
+$('m').value='Hola, quiero un/a '+tn+' de '+q.w+' × '+q.h+' × '+q.d+' cm en '+q.mat.toLowerCase()+'. Estimado: '+fmt(q.lo)+' a '+fmt(q.hi)+'.';
+});
+$('f').addEventListener('submit',function(e){
+e.preventDefault();
+var n=$('n').value.trim(),c=$('c').value.trim(),m=$('m').value.trim(),bad=false;
+function chk(id,er,ok,msg){$(er).textContent=ok?'':msg;if(!ok)bad=true}
+chk('n','en',n.length>1,'Escribí tu nombre.');
+chk('c','ec',/^\S+@\S+\.\S+$/.test(c)||/^[+\d][\d\s()-]{7,}$/.test(c),'Ingresá un email válido o un número de WhatsApp.');
+chk('m','em',m.length>9,'Contanos brevemente qué necesitás (mínimo 10 caracteres).');
+if(bad)return;
+$('f').style.display='none';
+$('okt').textContent='Gracias, '+n+'. Te vamos a escribir a '+c+' con los próximos pasos.';
+$('ok').classList.add('show');$('ok').focus();
+});
+})();
+</script>
+</body>
+</html>
